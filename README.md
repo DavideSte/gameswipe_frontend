@@ -1,3 +1,3 @@
 ### Mobile view
 
-![Mobile](./screenshots/gameswipe.gif)
+<img src="./screenshots/gameswipe.gif" alt="Mobile overview" style="max-height: 500px;">
