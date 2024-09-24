@@ -1,3 +1,3 @@
 ### Mobile view
 
-![Mobile](./screenshots/gameswipe.mp4)
+![Mobile](./screenshots/gameswipe.gif)
