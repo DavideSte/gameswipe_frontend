@@ -1,0 +1,11 @@
+.input {
+  @apply outline-none bg-white/25 text-sm p-2 px-4 rounded-md text-white border border-transparent focus-visible:border-white/25 focus-visible:ring-offset-0;
+}
+
+.link {
+  @apply text-blue-300 font-medium underline underline-offset-2;
+}
+
+.form {
+  @apply flex flex-col gap-4;
+}
