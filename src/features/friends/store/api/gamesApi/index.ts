@@ -1,10 +1,6 @@
 import { User } from "@/core/types";
 import { gamesApi } from "@/core/store/api/gamesApi";
-import {
-  Friendship,
-  GameCompareResponse,
-  GetFriendDataResponse,
-} from "@/core/store/api/gamesApi/types";
+import { Friendship, GetFriendDataResponse } from "@/core/store/api/gamesApi/types";
 
 export const gamesApiFriends = gamesApi.injectEndpoints({
   endpoints: (builder) => ({
@@ -36,13 +32,6 @@ export const gamesApiFriends = gamesApi.injectEndpoints({
       }),
       invalidatesTags: ["Friends"], // Invalidate to refetch friend list after accepting
     }),
-    compareFriend: builder.query<GameCompareResponse, string>({
-      query: (friendId) => ({
-        url: `/friends/${friendId}/compare`,
-        method: "GET",
-      }),
-      providesTags: ["GamesEdit"],
-    }),
     getFriendData: builder.query<GetFriendDataResponse, string>({
       query: (friendId) => ({
         url: `/friends/${friendId}`,
@@ -57,7 +46,6 @@ export const {
   useCreateFriendMutation,
   useGetFriendshipsQuery,
   useAcceptFriendRequestMutation,
-  useCompareFriendQuery,
   useGetFriendDataQuery,
 } = gamesApiFriends;
 export const { getFriendships } = gamesApiFriends.endpoints;

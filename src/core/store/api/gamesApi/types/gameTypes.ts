@@ -32,15 +32,6 @@ export interface Game {
   liked?: boolean;
 }
 
-export interface GameCompareResponse {
-  gamesInCommon: string[];
-  gamesPlayedOnlyByFriend: string[];
-  gamesLikedInCommon: string[];
-  gamesLikedOnlyByFriend: string[];
-  games: Game[];
-  friend: User;
-}
-
 export interface GetFriendDataResponse {
   gamesLikedByFriend: number[];
   gamesPlayedByFriend: number[];
